@@ -9,44 +9,29 @@
     <link rel="stylesheet" href="/static/css/index.css">
 </head>
 <body>
-    <head>
-        <h1>Main page</h1>
-        <a href="/createArticle" class="create_link">Create your article</a>
-    </head>
+    <header>
+        <div>
+            <h1>Main page</h1>
+        </div>
+
+        <div class="create_box_right">
+            <a href="/createArticle" class="create_link">Create your article</a>
+        </div>
+        <form method="post" class="clearButton">
+            <input type="submit" value="Clear" class="clearText" readonly><br>
+        </form>
+
+    </header>
 
     <main class="main_container">
+        {% for el in articles %}
         <div class="article">
-            <a href="/article/name" class="name">aboba</a>
-            <p class="score">5.0</p>
-            <p class="autor">danya</p>
-            <p class="date">3.05.2023</p>
+            <a href="/articlePage/{{ el.id }}" class="name">{{ el.name }}</a>
+            <p class="score">{{ el.points }}</p>
+            <p class="autor"> Autor: {{ el.autor }}</p>
+            <p class="date">Date: {{ el.date.date() }}</p>
         </div>
-            
-        <div class="article">
-            <a href="/article/name" class="name">aboba</a>
-            <p class="score">5.0</p>
-            <p class="autor">danya</p>
-            <p class="date">3.05.2023</p>
-        </div>
-
-        <div class="article">
-            <a href="/article/name" class="name">aboba</a>
-            <p class="score">5.0</p>
-            <p class="autor">danya</p>
-            <p class="date">3.05.2023</p>
-        </div>
-
-        <div class="article">
-            <p>aboba</p>
-        </div>
-
-        <div class="article">
-            <p>aboba</p>
-        </div>
-
-        <div class="article">
-            <p>aboba</p>
-        </div>
+        {% endfor %}
     </main>
     
 

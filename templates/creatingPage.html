@@ -9,30 +9,29 @@
     <link rel="stylesheet" href="/static/css/index.css">
 </head>
 <body>
-    <head>
+    <header>
         <h1>Create article</h1>
-        <a href="/" class="create_link">Return to main page</a>
-    </head>
+
+        <div class="create_box_right">
+            <a href="/" class="create_link">Return to main page</a>
+        </div>
+    </header>
 
     <main class="main_container">
-        
-        <form method="post">
-            <input type="text" name="Name" id="name">
-            <textarea name="Autor" id="autor"></textarea>
-            <textarea name="Text" id="text"></textarea>
-
-            <input type="submi" value="Сохранить">
-        </form>
-
-        <div class="article">
-            <a href="/article/name" class="name">aboba</a>
-            <p class="score">5.0</p>
-            <p class="autor">danya</p>
-            <p class="date">3.05.2023</p>
+        <div class="articleCreate">
+            <form method="post" class="formCreate">
+                <p class="createDisc">Name of your article</p>
+                <input type="text" name="name" id="name" class="nameCreate"><br>
+                <p class="createDisc">YourText</p>
+                <textarea name="text" id="text" class="textCreate"></textarea><br>
+                <p class="createDisc">Autor name</p>
+                <textarea name="autor" id="autor" class="autorCreate"></textarea><br>
+    
+                <input type="submit" value="Send" class="myButton" readonly><br>
+            </form>
         </div>
-        
+
     </main>
     
-
 </body>
 </html>

@@ -1,128 +1,413 @@
+header {
+    background-color: rgb(72, 152, 199);
+    height: 100px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
 body {
+    box-sizing: border-box;
     font-family: Tahoma, serif;
-    background-color: rgb(43, 43, 43);
+    background-color: whitesmoke;
+    margin: 0;
 }
 
 p {
-    color: rgb(208, 157, 221);
+    color:rgb(54, 113, 148);
 }
 
 a {
-    color: rgb(208, 157, 221);
+    color: grey;
 }
 
 h1 {
+    position: absolute;
     font-size: 64px;
+
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 50px;
     font-weight: bold;
 
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    
+    padding-top: 8px;
 
-    color: rgb(165, 110, 179);
+    color: whitesmoke;
 }
 
 .article {
     position: relative;
 
-    background-color: rgb(36, 21, 43);
-    border: 16px;
-    border-radius: 32px;
-
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     margin-right: 50px;
     margin-left: 50px;
 
     height: 200px;
 
+    background-color: whitesmoke;
+    border: 8px;
+    border-radius: 16px;
+    border-style:solid;
+    border-color:rgb(72, 152, 199);
 }
 
 .main_container {
     position: relative;
-    display:inline-flexbox;
+    display: inline-flexbox;
 
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 50px;
     
-    background-color: rgb(98, 74, 104);
+    background-color: whitesmoke;
     border: 16px;
-    border-radius: 32px;
+    border-radius: 16px;
     min-height: 950px;
 
     
-    padding-top: 50px;
     padding-bottom: 50px;
     
 }
 
 .name {
     text-align: left;
-    top:32px;
     margin-left: 32px;
+    margin-top: 0;
+    margin-bottom: 32px;
+    top: 32px;
 
     position: relative;
-    display:flow-root;
+    display: flex;
     font-size: 32px;
+    text-decoration: none;
 
-    color: rgb(153, 99, 167);
+    color:rgb(54, 113, 148);
 }
 
 .score {
-    text-align: right;
-    top:32px;
+    text-align: left;
+    float: right;
     margin-right: 32px;
 
-    position: relative;
-    display:flow-root;
-    font-size: 24px;
-
-    color: rgb(165, 110, 179);
-}
-
-.autor {
-    top: 15px;
-    left: 32px;
+    margin-top: -24px;
 
     position: relative;
     display: flex;
     font-size: 24px;
 
-    color: rgb(165, 110, 179);
+    color:rgb(62, 131, 170);
+}
+
+.autor {
+    left: 32px;
+
+    margin-top: 64px;
+
+    position: relative;
+    display: flex;
+    float: left;
+    font-size: 24px;
+
+    color:rgb(62, 131, 170);
 }
 
 .date {
-    top: -32px;
-    left: 90%;
+    text-align: right;
+    float: right;
+    margin-right: 32px;
+    margin-top: 72px;
+    margin-bottom: 0;
 
     position: relative;
     display: flex;
     font-size: 16px;
 
-    color: rgb(165, 110, 179);
+    color:rgb(62, 131, 170);
 }
 
 .create_link {
-    left: 70%;
-    top: 50px;
-    position: absolute;
+    position: relative;
     font-size: 24px;
     font-weight: bold;
     display: flex;
+    margin-right: 50px;
+    text-decoration: none;
+    
     
     width: 300px;
-    height: 50px;
-    background-color: rgb(36, 21, 43);
+    height: 64px;
+    background-color:rgb(54, 113, 148);
     border: 16px;
-    border-radius: 16px;
+    border-radius: 8px;
 
     align-items: center;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
 
-    color: rgb(176, 97, 196);
+    color: whitesmoke;
 }
 
+.create_link:hover {
+    background-color:rgb(62, 131, 170);
+}
+
+.articleCreate {
+    display: flexbox;
+    padding-bottom: 16px;
+
+    margin-top: 16px;
+    margin-right: 50px;
+    margin-left: 50px;
+
+    min-height: 10px;
+
+    background-color: whitesmoke;
+    border: 8px;
+    border-radius: 16px;
+    border-style:solid;
+    border-color:rgb(72, 152, 199);
+
+}
+
+.create_box_right {
+    float: right;
+    margin-top: 20px;
+}
+
+.formCreate {
+    position: relative;
+
+    padding-left: 32px;
+    padding-top: 32px;
+
+    
+}
+
+.nameCreate {
+    display: flex;
+    width: 20rem;
+    padding: 10px;
+
+    border: 2px;
+    border-style: solid;
+    border-color:rgb(62, 131, 170);
+    border-radius: 10px;
+
+    background-color: whitesmoke;
+}
+
+.textCreate {
+    display: flexbox;
+    width: 50rem;
+    min-height: 20rem;
+    padding: 20px;
+
+    border: 2px;
+    border-style: solid;
+    border-color:rgb(62, 131, 170);
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+
+.autorCreate {
+    display: flex;
+    width: 30rem;
+    padding: 10px;
+    height: 1rem;
+
+    border: 2px;
+    border-style: solid;
+    border-color:rgb(62, 131, 170);
+    border-radius: 10px;
+
+    background-color: whitesmoke;
+}
+
+.createDisc {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.myButton {
+    display: flex;
+    min-width: 4rem;
+    padding: 10px;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+
+    background-color: rgb(62, 131, 170);
+
+    border: 0;
+    border-radius: 10px;
+}
+
+.myButton:hover { 
+    background-color: rgb(86, 164, 209); 
+}
+
+.text {
+    display: flex;
+    margin-left: 32px;
+    margin-top: 48px;
+    margin-bottom: 0;
+
+    width: 50rem;
+    min-height: 4rem;
+    font-size: 24px;
+
+    color:rgb(54, 113, 148);
+}
+
+.onArticlePage {
+    display: flexbox;
+    padding-bottom: 120px;
+    margin-right: 50px;
+    margin-left: 50px;
+
+    min-height: 10px;
+
+    background-color: whitesmoke;
+    border: 8px;
+    border-radius: 16px;
+    border-style:solid;
+    border-color:rgb(72, 152, 199);
+}
+
+.comments {
+    display: flexbox;
+    padding-bottom: 16px;
+
+    margin-top: 16px;
+    margin-right: 50px;
+    margin-left: 50px;
+
+    min-height: 10px;
+
+    background-color: whitesmoke;
+    border: 8px;
+    border-radius: 16px;
+    border-style:solid;
+    border-color:rgb(72, 152, 199);
+}
+
+.textOfComment {
+    display: flexbox;
+    width: 50rem;
+    min-height: 7rem;
+    padding: 10px;
+
+    border: 2px;
+    border-style: solid;
+    border-color:rgb(62, 131, 170);
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+
+.rating-area {
+	overflow: hidden;
+    display: inline-block;
+	width: 265px;
+	margin: 0 auto;
+    padding-left: 0;
+
+    margin-bottom: 16px;
+}
+.rating-area:not(:checked) > input {
+	display: none;
+}
+.rating-area:not(:checked) > label {
+	float: right;
+	width: 42px;
+	padding: 0;
+	cursor: pointer;
+	font-size: 32px;
+	line-height: 32px;
+	color: lightgrey;
+	text-shadow: 1px 1px #bbb;
+}
+.rating-area:not(:checked) > label:before {
+	content: '★';
+}
+.rating-area > input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px #c60;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+	color: gold;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px goldenrod;
+}
+.rate-area > label:active {
+	position: relative;
+}
+
+.oneComment {
+    position: relative;
+
+    margin-bottom: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+
+    padding: 16px;
+
+    min-height: 20px;
+
+    background-color: whitesmoke;
+    border: 2px;
+    border-radius: 16px;
+    border-style:solid;
+    border-color:rgb(72, 152, 199);
+}
+
+.autorOfComment {
+    font-size: 32px;
+    margin: 0;
+}
+
+.commentText {
+    margin: 0;
+    margin-top: 16px;
+    font-size: 24px;
+    color:rgb(72, 152, 199);
+}
+
+.commentDate {
+    margin: 0;
+    margin-top: 16px;
+    font-size: 16px;
+}
+
+.clearButton {
+    position: relative;
+    float: right;
+    display: flex;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.clearText {
+    font-size: 24px;
+    color: whitesmoke;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 300px;
+    height: 64px;
+    background-color:rgb(54, 113, 148);
+    border: 16px;
+    border-radius: 8px;
+}
+
+.clearText:hover {
+    background-color:rgb(62, 131, 170);
+}

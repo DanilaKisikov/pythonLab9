@@ -1,9 +1,63 @@
-{% extends 'base.html' %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Article page</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+    <header>
+        <h1>Article page</h1>
+        <div class="create_box_right">
+            <a href="/" class="create_link">Return to main page</a>
+        </div>
+    </header>
 
-{% block title %}
-Article page
-{% endblock %}
+    <main class="main_container">
+        <div class="onArticlePage">
+            <p class="name">{{ article.name }}</p>
+            <p class="text">{{ article.text }}</p>
+            <p class="score">{{ article.points }}</p>
+            <p class="autor"> Autor: {{ article.autor }}</p>
+            <p class="date">Date: {{ article.date.date() }}</p>
+        </div>
 
-{% block body %}
-<h1>Article page</h1>
-{% endblock %}
+        <div class="comments">
+            <form method="post" class="formCreate">
+                <p class="createDisc">Your name</p>
+                <textarea name="autor" id="autor" class="autorCreate"></textarea><br>
+                <p class="createDisc">YourText</p>
+                <textarea name="text" id="text" class="textOfComment"></textarea><br>
+                <p class="createDisc">Score</p>
+                <div class="rating-area">
+                    <input type="radio" id="star-5" name="rating" value="5">
+                    <label for="star-5" title="«5»"></label>
+                    <input type="radio" id="star-4" name="rating" value="4">
+                    <label for="star-4" title="«4»"></label>
+                    <input type="radio" id="star-3" name="rating" value="3">
+                    <label for="star-3" title="«3»"></label>
+                    <input type="radio" id="star-2" name="rating" value="2">
+                    <label for="star-2" title="«2»"></label>
+                    <input type="radio" id="star-1" name="rating" value="1">
+                    <label for="star-1" title="«1»"></label>
+                </div>
+
+                <input type="submit" value="Send" class="myButton" readonly><br>
+            </form>
+
+            {% for comment in comments %}
+                <div class="oneComment">
+                    <p class="autorOfComment">{{ comment.autor }}</p>
+                    <p class="commentText">{{ comment.text }}</p>
+                    <p class="commentDate">{{ comment.points }}</p>
+                    <p class="commentDate">{{ comment.date.date() }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+    
+</body>
+</html>
